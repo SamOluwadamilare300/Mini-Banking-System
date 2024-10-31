@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { sidebarLinks } from '@/constants'
 // import { CiBank } from 'react-icons/ci'
-import { Cn } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
 
 const SideBar = ({ user }: SiderbarProps) => {
@@ -33,15 +33,15 @@ const SideBar = ({ user }: SiderbarProps) => {
             <Link
               href={item.route}
               key={item.label}
-              className={Cn('sidebar-link', { 'bg-bank-gradient': isActive })}
+              className={cn('sidebar-link', { 'bg-bank-gradient': isActive })}
             >
               <div className="relative size-6">
                  <Image src={item.imgURL} width={35} height={35}
                  alt={item.label}
-                 className={Cn ({'brightness-[3] invert-0' : isActive })}
+                 className={cn ({'brightness-[3] invert-0' : isActive })}
                   />
               </div>
-              <p className={Cn('sidebar-label', { '!text-white': isActive })}>
+              <p className={cn('sidebar-label', { '!text-white': isActive })}>
                   {item.label}
               </p>
             </Link>

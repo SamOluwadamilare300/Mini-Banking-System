@@ -36,7 +36,7 @@ const Home = () => {
       <RightSideBar
         user={loggedIn}
         transactions={[]} // Fixed typo from transaction to transactions
-        banks={[{ currentBalance }, { currentBalance }]} // Pass currentBalance dynamically
+        banks={[{currentBalance}, {currentBalance}]} // Pass currentBalance dynamically
       />
     </section>
   );
